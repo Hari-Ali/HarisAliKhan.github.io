@@ -1,0 +1,168 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+a {
+  color: #033D00;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Buttons */
+.btn, .project-btn {
+  display: inline-block;
+  background: #033D00;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover, .project-btn:hover {
+  background: #026600;
+}
+
+/* Hero */
+header {
+  background: url('images/hero-bg.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+}
+
+header .hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+header .hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+}
+
+section h2 {
+  text-align: center;
+  color: #033D00;
+  margin-bottom: 40px;
+}
+
+/* Skills */
+.skill-bar {
+  margin-bottom: 20px;
+}
+
+.skill-bar p {
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+
+.bar {
+  background: #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  height: 20px;
+}
+
+.bar div {
+  height: 100%;
+  background: #033D00;
+  width: 0;
+  animation: fill 2s forwards;
+}
+
+@keyframes fill {
+  from { width: 0; }
+  to { width: inherit; }
+}
+
+/* Projects Grid */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.project-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-card .overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(3,61,0,0.85);
+  color: white;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  transition: opacity 0.3s;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Contact Section */
+#contact p {
+  margin: 10px 0;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #033D00;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  header .hero-content h1 {
+    font-size: 2rem;
+  }
+  header .hero-content p {
+    font-size: 1rem;
+  }
+}
